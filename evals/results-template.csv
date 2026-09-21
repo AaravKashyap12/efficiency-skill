@@ -1,0 +1,3 @@
+case_id,harness,session_model,session_effort,condition,run_n,dispatched,dispatch_models,dispatch_efforts,main_in_tokens,main_out_tokens,main_cached_tokens,est_cost_usd,wall_seconds,passed_acceptance,followups_needed,notes
+E01,claude-code,,,baseline,1,,,,,,,,,,,
+E01,claude-code,,,skill,1,,,,,,,,,,,

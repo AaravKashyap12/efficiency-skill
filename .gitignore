@@ -1,0 +1,16 @@
+# Local/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Eval scratch output
+*.tmp
+*.log
+results.csv
+
+# Keep dist/*.skill tracked as release artifacts.
