@@ -1,0 +1,146 @@
+{
+  "date": "2026-09-25",
+  "method": "Selected fields from actual local Claude Code JSONL transcripts; no prompts, results, model identifiers, or errors rewritten. Personal paths/session IDs omitted. SHA256 values identify original local transcripts.",
+  "preflights": [
+    {
+      "probe": "isolated-auth",
+      "raw_sha256": "d44d681ace2df59c3785123aaf4a01df56ba1b60674822392e4de66813211f7d",
+      "cli_version": "2.1.114",
+      "requested_model": "opus",
+      "reported_model": "claude-opus-4-7",
+      "effort": "high",
+      "prompt": "Write a Python function that adds two numbers.",
+      "api_retries": [],
+      "behavioral_response_received": false,
+      "wall_seconds": null,
+      "outcome": "AUTHENTICATION_FAILED",
+      "harness_result": {
+        "is_error": true,
+        "result": "Not logged in \u00b7 Please run /login",
+        "total_cost_usd": 0,
+        "duration_ms": 185,
+        "duration_api_ms": 0,
+        "usage": {
+          "input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "output_tokens": 0,
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": "standard",
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "inference_geo": "",
+          "iterations": [],
+          "speed": "standard"
+        },
+        "modelUsage": {}
+      }
+    },
+    {
+      "probe": "default-alias",
+      "raw_sha256": "6ddf2d5d57b89daba1d8f5920779a901fc698141cfcf87b1e3d82c0729278eaf",
+      "cli_version": "2.1.114",
+      "requested_model": "opus",
+      "reported_model": "claude-opus-4-7",
+      "effort": "high",
+      "prompt": "Write a Python function that adds two numbers.",
+      "api_retries": [
+        {
+          "attempt": 1,
+          "error": "server_error"
+        },
+        {
+          "attempt": 2,
+          "error": "server_error"
+        },
+        {
+          "attempt": 3,
+          "error": "server_error"
+        },
+        {
+          "attempt": 4,
+          "error": "server_error"
+        },
+        {
+          "attempt": 5,
+          "error": "server_error"
+        },
+        {
+          "attempt": 6,
+          "error": "server_error"
+        },
+        {
+          "attempt": 7,
+          "error": "server_error"
+        },
+        {
+          "attempt": 8,
+          "error": "server_error"
+        },
+        {
+          "attempt": 9,
+          "error": "server_error"
+        }
+      ],
+      "behavioral_response_received": false,
+      "wall_seconds": 120.05,
+      "outcome": "TIMEOUT"
+    },
+    {
+      "probe": "configured-model",
+      "raw_sha256": "965b90083c13d6fb135a3a46f35e03a351f7886872325b1ffe962b1f70abb432",
+      "cli_version": "2.1.114",
+      "requested_model": "claude-opus-4.6",
+      "reported_model": "claude-opus-4.6",
+      "effort": "high",
+      "prompt": "Write a Python function that adds two numbers.",
+      "api_retries": [
+        {
+          "attempt": 1,
+          "error": "server_error"
+        },
+        {
+          "attempt": 2,
+          "error": "server_error"
+        },
+        {
+          "attempt": 3,
+          "error": "server_error"
+        },
+        {
+          "attempt": 4,
+          "error": "server_error"
+        },
+        {
+          "attempt": 5,
+          "error": "server_error"
+        },
+        {
+          "attempt": 6,
+          "error": "server_error"
+        },
+        {
+          "attempt": 7,
+          "error": "server_error"
+        },
+        {
+          "attempt": 8,
+          "error": "server_error"
+        },
+        {
+          "attempt": 9,
+          "error": "server_error"
+        }
+      ],
+      "behavioral_response_received": false,
+      "wall_seconds": 120.06,
+      "outcome": "TIMEOUT"
+    }
+  ],
+  "routing_limit": "Configured Haiku alias resolves to an Opus model; cheap-tier equivalence is unverified. User settings were not changed."
+}
