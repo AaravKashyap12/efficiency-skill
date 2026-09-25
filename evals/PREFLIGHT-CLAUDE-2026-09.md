@@ -23,3 +23,5 @@ The configured Haiku alias points to an Opus model. A routed call labeled `haiku
 ## Resume after the connection works
 
 Use the same model/effort and clean fixture per condition, explicitly load candidates without reinstalling them, retain transcripts, and independently assess acceptance. Record the actual model behind each dispatch. Do not count aliased Opus calls as Haiku or estimate a provider's billed costs from an unrelated price table. Run the requested repetitions before making efficacy claims or publishing.
+
+Task 3 is BLOCKED: the configured provider model catalog returned HTTP 503. ANTHROPIC_DEFAULT_HAIKU_MODEL and ANTHROPIC_SMALL_FAST_MODEL both resolve to claude-opus-4.6; ANTHROPIC_DEFAULT_SONNET_MODEL is claude-sonnet-4-6; ANTHROPIC_DEFAULT_OPUS_MODEL is unset. Both the Haiku and small-fast mappings should be repointed to the provider's cheapest Claude model once its catalog is reachable and the model is confirmed. No Claude cost figures are valid until then. No configuration was changed, and no Claude evaluation was run.
