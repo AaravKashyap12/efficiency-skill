@@ -26,7 +26,7 @@ Codex:
 cp -r efficiency-skill ~/.codex/skills/
 ```
 
-Or load `dist/efficiency-skill.skill` in any harness that accepts the packaged format.
+`dist/efficiency-skill.skill` packages the 0.2.0 skill source and provider references. Its file set and file bytes were verified against the source folder during release preparation.
 
 ## Layout
 
@@ -36,7 +36,19 @@ Or load `dist/efficiency-skill.skill` in any harness that accepts the packaged f
 
 ## Status
 
-The routing table is sourced but not yet measured. `evals/cases.md` is the proof plan. A route is approved for a task class only when the with-skill runs match the baseline pass rate at lower cost. Results will be published here as they are collected.
+The routing table is sourced but not yet measured. `evals/cases.md` is the proof plan. A route is approved for a task class only when the with-skill runs match the baseline pass rate at lower cost. Only observed results will be published; the pre-launch status is recorded below.
+
+## Results — September 2026 pre-launch
+
+Twenty isolated Codex trials compared baseline and candidate behavior for E01, E02, E05, E09, and E12, twice per condition. Recorded outcomes: 14 PASS, 6 PARTIAL, 0 FAIL. See the [case records and interpretation](evals/RESULTS-2026-09.md) and [CSV](evals/results-2026-09.csv); PARTIAL is not a full acceptance pass.
+
+Both routed E02 runs needed a follow-up after initially discovering zero tests. Worker model/effort overrides are recorded as requested values; actual backend identities and per-run costs were not exposed. No dollar savings, cheaper-tier execution claim, or route approval is established. E05's actual answers and any silent misses remain visible in the records. The website comparisons verify artifacts and requested routing only, not cost superiority.
+
+The originally requested Claude Code measurements remain blocked by authentication/provider failures, recorded separately. Dated provider references are unchanged. These Codex trials do not stand in for Claude Code cost measurements.
+
+## Pairing with engineering workflows
+
+Routing governs dispatch, tier, and effort. An engineering workflow governs code ownership, verification, and completion. Keep one owner per file and consequential decisions with the session owner; bounded workers return evidence without recursive reviewer loops.
 
 ## License
 

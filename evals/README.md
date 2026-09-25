@@ -4,9 +4,7 @@ Real measurements, not vibes. Every case below is run twice per harness: once in
 
 ## Setup
 
-1. Install the skill for the harness under test.
-   - Claude Code: copy `efficiency-skill/` to `~/.claude/skills/efficiency-skill/`.
-   - Codex: copy `efficiency-skill/` to `~/.codex/skills/efficiency-skill/`.
+1. Load the candidate in an isolated evaluation session, without replacing installed skills before review. For Claude Code CLI runs, disable automatic skill loading and append the candidate SKILL.md as system context, with its references copied into the scratch workspace; use identical flags and task prompts in baseline runs, omitting only that skill context. Record this explicit-loading deviation from automatic discovery. After approval, a separate installed-discovery test may use the normal skill folder.
 2. Copy `fixture/` to a scratch directory before each run. Cases E03, E07, E08, and E12 modify files. Start every case from a clean copy.
 3. Confirm the harness can actually route. In Claude Code, `CLAUDE_CODE_SUBAGENT_MODEL_FORCE` must be unset. In Codex, `agents.enabled` must not be `false`.
 4. Optional, Claude Code only: install `tools/dispatch-ledger.sh` as a `PreToolUse` hook so every dispatch is logged with its model. See the header of that file.
