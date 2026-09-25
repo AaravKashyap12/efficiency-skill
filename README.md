@@ -26,7 +26,7 @@ Codex:
 cp -r efficiency-skill ~/.codex/skills/
 ```
 
-The tracked `dist/efficiency-skill.skill` remains the earlier release artifact; it has not been rebuilt for this unreviewed 0.2.0 candidate. Review the source folder for these changes. Rebuilding and reinstalling the package are post-review tasks.
+`dist/efficiency-skill.skill` packages the 0.2.0 skill source and provider references. Its file set and file bytes were verified against the source folder during release preparation.
 
 ## Layout
 

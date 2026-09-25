@@ -30,6 +30,8 @@ If the reference's `review_after` date has passed, verify each model row against
 
 If the harness cannot set a subagent model, or subagents are disabled, routing is effort-only: skip Step 1 and apply the class table to effort. Treat `CLAUDE_CODE_SUBAGENT_MODEL_FORCE` when active as disabling per-dispatch tier selection, and Codex `agents.enabled = false` as disabling dispatch. A forced model is not proof that subagents themselves are disabled. If effort is not controllable either, work inline and disclose that limitation; never claim an unavailable setting was applied.
 
+Confirm the harness's actual model IDs (`/model`, `/status`) match the reference rows; if they do not, treat the reference as stale and route by effort only until verified.
+
 Tiers are relative to the session model the user picked:
 
 - **strongest**: the session model. Never switch it and never tell the user to switch it.
@@ -94,11 +96,13 @@ The subagent cannot see the conversation. Every dispatch states:
 1. Exact objective and what done looks like.
 2. Files, directories, or commands to start from.
 3. Constraints: read-only or write, files it may not touch, repo policies.
-4. Verification the subagent must run and report, with the command.
+4. Verification the subagent must run and report, with the exact command and working directory.
 5. Output shape: conclusions with file and line references, not file dumps. Compact pass or fail summaries, not raw logs.
 6. Stop conditions: return on ambiguity, on a protected boundary, or after two distinct evidence-based attempts fail.
 
 ## Step 5: Verify, escalate, or take over
+
+A result of zero tests, zero matches or an empty listing is a weak result: re-check once before returning.
 
 - Verify load-bearing claims from a cheap tier before building on them. Require file and line references, command output, or an independent check.
 - A weak result retries once, one effort step up. A second weak result retries one tier up. After that the orchestrator takes over inline.
